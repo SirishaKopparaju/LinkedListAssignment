@@ -5,13 +5,12 @@ public class LinkedListMain {
 
 	public static void main(String[]args) {
 		LinkedList linkedlist=new LinkedList();
-		linkedlist.insertAtFirst(12);
-		linkedlist.insertAtFirst(32);
-		linkedlist.insertAtFirst(82);
-		linkedlist.insertAtFirst(34);
+		linkedlist.inserAtFirst(12);
+		linkedlist.inserAtFirst(32);
+		linkedlist.inserAtFirst(82);
+		linkedlist.inserAtFirst(34);
 		linkedlist.display();
 
-		
 	}
 
 }
