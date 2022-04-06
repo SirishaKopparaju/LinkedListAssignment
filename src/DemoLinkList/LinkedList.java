@@ -41,9 +41,29 @@ public class LinkedList {
 			Node n=head;
 			for(int i=0;i<size;i++) {
 				System.out.println(n.getData());
-				n=n.getNext();;
+				n=n.getNext();
 				
 			}
 		}
+	}
+	
+	public void insertAtLast(int data) {
+		Node n,t;
+        n=new Node();
+        n.setData(data);
+        n.setNext(null);
+        t=head;
+		if(head==null) {
+			head=n;
+			
+		}else {
+			 while (t.getNext() !=null) {
+	                t=t.getNext();
+	                }
+	                t.setNext(n);
+	                tail=n;
+	            size++;
+		}
+		
 	}
 }
