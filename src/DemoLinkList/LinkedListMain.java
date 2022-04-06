@@ -11,6 +11,8 @@ public class LinkedListMain {
 		linkedlist.inserAtFirst(34);
 		linkedlist.inserAtFirst(34);
 		linkedlist.insertAtLast(56);
+		linkedlist.deleteFirst();
+        linkedlist.deleteLast();
 		linkedlist.display();
 
 	}
