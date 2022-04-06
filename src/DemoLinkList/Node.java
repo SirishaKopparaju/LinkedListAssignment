@@ -1,8 +1,10 @@
 package DemoLinkList;
 
-public class Node {
+public class Node<E>{
 	private int data;
 	private Node node;
+	public E key;
+	
 	
 	public Node() {
 		this.data=0;
@@ -12,10 +14,10 @@ public class Node {
 	
 	
 	
-	public Node(int data, Node node) {
+	public Node(E key) {
 		super();
-		this.data = data;
-		this.node = node;
+		this.key=key;
+		this.node = null;
 	}
 	public int getData() {
 		return data;
@@ -35,7 +37,7 @@ public class Node {
 
 	public Node getNext() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.node;
 	}
 
 
@@ -43,7 +45,7 @@ public class Node {
 
 	public void setNext(Node head) {
 		// TODO Auto-generated method stub
-		
+		this.node=head;
 	}
 	
 	

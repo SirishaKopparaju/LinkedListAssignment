@@ -9,10 +9,10 @@ public class LinkedListMain {
 		linkedlist.inserAtFirst(32);
 		linkedlist.inserAtFirst(82);
 		linkedlist.inserAtFirst(34);
-		linkedlist.inserAtFirst(34);
-		linkedlist.insertAtLast(56);
-		linkedlist.deleteFirst();
-        linkedlist.deleteLast();
+		linkedlist.inserAtFirst(38);
+		//linkedlist.insertAtLast(56);
+	linkedlist.deleteFirst();
+        // linkedlist.deleteLast();
 		linkedlist.display();
 
 	}

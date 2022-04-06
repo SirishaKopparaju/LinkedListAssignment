@@ -2,12 +2,13 @@ package DemoLinkList;
 
 public class LinkedList {
 	int size;
-	Node head;
-	Node tail;
+public 	Node head;
+public	Node tail;
 	
 	public LinkedList() {
 		this.size=0;
 		this.head=null;
+		
 	}
 
 	
@@ -53,20 +54,25 @@ public class LinkedList {
         n=new Node();
         n.setData(data);
         n.setNext(null);
-        t=head;
-		if(head==null) {
-			head=n;
+        // this.head;
+		if(this.head==null) {
+			this.head=n;
 			
-		}else {
-			 while (t.getNext() !=null) {
-	                t=t.getNext();
-	                }
-	                t.setNext(n);
+		}else if(this.tail==null){
+			this.tail=n;
+			}
+		else {
+			
+			 while (this.head.getNext()!=null) {
+             Node tempnode=this.head;  
+			 this.head=n;
+
+	                this.head.setNext(tempnode);
 	                tail=n;
 	            size++;
 		}
 		
-	}
+	}}
 	
 	
 	public void insertAtPosition(int val,int pos){
@@ -95,10 +101,13 @@ public class LinkedList {
 	
 	
 	public void deleteFirst(){
+		Node tempnode;
         if(head == null){
+        	tempnode=null;
             System.out.println("Empty");
         }
         else{
+        	tempnode=this.head;
             head=head.getNext();
             size--;
         }
@@ -121,4 +130,34 @@ public class LinkedList {
         }
     }
 
-}
+
+	public boolean peek() {
+		// TODO Auto-generated method stub
+		boolean stackEmpty=false;
+
+		if(this.head==null) {
+	
+			stackEmpty=true;
+	}
+		return stackEmpty;
+	}
+	public void add( Node myFirstNode)
+	{
+		Node tempNode;
+		if(this.head==null) {
+			this.head=myFirstNode;
+		}
+		else if(this.tail==null){
+			this.tail=myFirstNode;
+		}
+		else {
+		tempNode=this.head;
+		this.head=myFirstNode;
+		this.head.setNext(tempNode);
+		
+	}
+	
+	}
+		
+	}
+

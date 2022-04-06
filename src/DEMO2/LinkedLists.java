@@ -1,6 +1,6 @@
 package DEMO2;
 
-public class LinkedList {
+public class LinkedLists {
 Node head;
 public void insert(int data)
 {
@@ -27,15 +27,29 @@ public void insertAtStart(int data) {
 	node.next=head;
 	head=node;
 }
+public void insertAt(int index,int data) {
+	Node node=new Node();
+	node.data=data;
+	node.next=null;
+	Node n=head;
+	for(int i=0;i<index;i++) {
+		n=n.next;
+	}
+	node.next=n.next;
+	n.next=node;
+}
 
 
 public void show() {
 	Node node=head;
 	while(node.next!=null) {
 		node=node.next;
+		System.out.println(node.data);
+
 	}
-	System.out.println(node.data);
 	}
+	
 }
+
 
 
