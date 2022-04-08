@@ -1,11 +1,11 @@
 package DemoLinkList;
 
-public class LinkedList {
+public class MyLinkedList {
 	int size;
-public 	Node head;
-public	Node tail;
+    public 	Node head;
+    public	Node tail;
 	
-	public LinkedList() {
+	public MyLinkedList() {
 		this.size=0;
 		this.head=null;
 		
@@ -19,9 +19,9 @@ public	Node tail;
 		return false;
 	}
 	
-	public void inserAtFirst(int data) {
-		Node node=new Node();
-		node.setData(data);
+	/*public void inserAtFirst(int data) {
+		//Node node=new Node();
+	//	node.setData(data);
 		if(head==null) {
 			head=node;	
 			size++;
@@ -31,10 +31,10 @@ public	Node tail;
 			head=node;
 			size++;
 		}
-	}
+	}*/
 	
 	
-	public void display() {
+	/*public void display() {
 		System.out.println("size ::->"+size);
 		if(size==0) {
 			System.out.println("List is empty");
@@ -47,12 +47,12 @@ public	Node tail;
 				
 			}
 		}
-	}
+	}*/
 	
-	public void insertAtLast(int data) {
+	/*public void insertAtLast(int data) {
 		Node n,t;
-        n=new Node();
-        n.setData(data);
+       // n=new Node();
+     //   n.setData(data);
         n.setNext(null);
         // this.head;
 		if(this.head==null) {
@@ -73,9 +73,9 @@ public	Node tail;
 		}
 		
 	}}
+	*/
 	
-	
-	public void insertAtPosition(int val,int pos){
+/*	public void insertAtPosition(int val,int pos){
         if (pos == 1){
         	inserAtFirst(val);
         }
@@ -97,7 +97,7 @@ public	Node tail;
             }
         }
 
-    }
+    }*/
 	
 	
 	public void deleteFirst(){
@@ -131,33 +131,56 @@ public	Node tail;
     }
 
 
-	public boolean peek() {
-		// TODO Auto-generated method stub
-		boolean stackEmpty=false;
-
-		if(this.head==null) {
 	
-			stackEmpty=true;
-	}
-		return stackEmpty;
-	}
 	public void add( Node myFirstNode)
 	{
+		//System.out.println("my add method");
+		//System.out.println(this.head.getKey());	
+
 		Node tempNode;
 		if(this.head==null) {
 			this.head=myFirstNode;
 		}
-		else if(this.tail==null){
-			this.tail=myFirstNode;
+	    if(this.tail==null){
+        this.tail=myFirstNode;
 		}
 		else {
 		tempNode=this.head;
 		this.head=myFirstNode;
 		this.head.setNext(tempNode);
-		
 	}
+		System.out.println(this.head.getKey());	
+
+	}
+
+
+	public Node pop() {
+		Node tempnode=this.head;
+		this.head=head.getNext();
+		return tempnode;
+	}
+	/*public boolean peek() {
+		// TODO Auto-generated method stub
+	boolean stackEmpty=false;
+	if(this.head==null) {
 	
+			stackEmpty=true;
 	}
+		return stackEmpty;
+	//}	
+
 		
 	}
+*/
+
+	public boolean peek() {
+		// TODO Auto-generated method stub
+		boolean stackEmpty=false;
+		if(this.head==null) {
+		
+				stackEmpty=true;
+		}
+			return stackEmpty;
+	}
+}
 

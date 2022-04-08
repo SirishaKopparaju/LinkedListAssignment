@@ -1,35 +1,29 @@
 package DemoLinkList;
 
 public class Node<E>{
-	private int data;
-	private Node node;
+	//private int data;
+	//private Node node;
 	public E key;
-	
-	
-	public Node() {
-		this.data=0;
-		this.node=null;
-	}
-	
-	
-	
+	public Node next;	
 	
 	public Node(E key) {
-		super();
+	//	super();
 		this.key=key;
-		this.node = null;
+		this.next = null;
 	}
-	public int getData() {
-		return data;
+	
+
+
+
+	public E getKey() {
+		return key;
 	}
-	public void setData(int data) {
-		this.data = data;
-	}
-	public Node getNode() {
-		return node;
-	}
-	public void setNode(Node node) {
-		this.node = node;
+
+
+
+
+	public void setKey(E key) {
+		this.key = key;
 	}
 
 
@@ -37,15 +31,15 @@ public class Node<E>{
 
 	public Node getNext() {
 		// TODO Auto-generated method stub
-		return this.node;
+		return this.next;
 	}
 
 
 
 
-	public void setNext(Node head) {
+	public void setNext(Node next) {
 		// TODO Auto-generated method stub
-		this.node=head;
+		this.next=next;
 	}
 	
 	

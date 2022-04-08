@@ -1,12 +1,13 @@
 package Stack;
 
-import java.util.LinkedList;
+//import java.util.LinkedList;
 
+import DemoLinkList.MyLinkedList;
 import DemoLinkList.Node;
 
 public class MyStack<INode, E> {
-		private final LinkedList<E> myLinkedList=new LinkedList();
-		private LinkedList linkedList;
+		public MyLinkedList myLinkedList = new MyLinkedList();
+	//	private LinkedList linkedList;
 	public MyStack() {
 		
 	}
@@ -18,9 +19,12 @@ public class MyStack<INode, E> {
 			//this.linkedList=new LinkedList();
 		//}
 
-		public void push(E myFirstNode) {
+		public void push(Node myNode) {
 			// TODO Auto-generated method stub
-			myLinkedList.add(myFirstNode);
+			System.out.println("my push method");	
+
+			myLinkedList.add(myNode);
+
 		}
 
 
@@ -32,9 +36,18 @@ public class MyStack<INode, E> {
 		public static void main(String[]args) {
 			StackTest stack=new StackTest();
 			stack.given3NumbersWhenAddedToStackShouldHaveLastAddedNode();
+			
+			//stack.given3NumbersInStackWhenPopedShouldWithLastAddedNode();
+		}
+
+
+		public boolean peek() {
+			// TODO Auto-generated method stub
+		boolean StackEmpty=	 myLinkedList.peek();
+			return StackEmpty;
 		}
 		
 		
-	}
+		}
 
 
